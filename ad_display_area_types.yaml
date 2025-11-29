@@ -1,0 +1,240 @@
+# 広告表示エリアタイプ定義
+ad_display_area_types:
+
+  # === 漫画関連 (5箇所) ===
+  manga_related:
+    - index: 0
+      dart_name: mangaDetailPage
+      json_value: manga_detail_page
+      description: 漫画詳細ページ
+      category: page
+
+    - index: 1
+      dart_name: mangaPageViewer
+      json_value: manga_page_viewer
+      description: 漫画ページビューアー
+      category: page
+
+    - index: 2
+      dart_name: mangaViewerReadNextContents
+      json_value: manga_viewer_read_next_contents
+      description: 漫画ビューアー次話読み込みコンテンツ
+      category: component
+
+    - index: 3
+      dart_name: mangaLoadingDialog
+      json_value: manga_loading_dialog
+      description: 漫画読み込みダイアログ
+      category: dialog
+
+    - index: 4
+      dart_name: doujinComicLoadingDialog
+      json_value: doujin_comic_loading_dialog
+      description: 同人コミック読み込みダイアログ
+      category: dialog
+
+  # === ポイント受け取り関連 (5箇所) ===
+  point_receive_related:
+    - index: 5
+      dart_name: onceGetPointConfirmDialog
+      json_value: once_get_point_confirm_dialog
+      description: ポイント一括受け取り確認ダイアログ
+      category: dialog
+
+    - index: 6
+      dart_name: receiveCampaignPointTab
+      json_value: receive_campaign_point_tab
+      description: キャンペーンポイント受け取りタブ
+      category: tab
+
+    - index: 7
+      dart_name: pointReceiveDialog
+      json_value: point_receive_dialog
+      description: ポイント受け取りダイアログ
+      category: dialog
+
+    - index: 8
+      dart_name: fiveMinutesRewardTab
+      json_value: five_minutes_reward_tab
+      description: 5分間リワードタブ
+      category: tab
+
+    - index: 9
+      dart_name: confirmReceiveNowDialog
+      json_value: confirm_receive_now_dialog
+      description: 即座受け取り確認ダイアログ
+      category: dialog
+
+  # === キャンペーン関連 (9箇所) ===
+  campaign_related:
+    - index: 10
+      dart_name: campaignPage
+      json_value: campaign_page
+      description: キャンペーンページ
+      category: page
+
+    - index: 11
+      dart_name: campaignItemPage
+      json_value: campaign_item_page
+      description: キャンペーンアイテムページ
+      category: page
+
+    - index: 12
+      dart_name: campaignDetailPage
+      json_value: campaign_detail_page
+      description: キャンペーン詳細ページ
+      category: page
+
+    - index: 13
+      dart_name: campaignInviteDoneDialog
+      json_value: campaign_invite_done_dialog
+      description: キャンペーン招待完了ダイアログ
+      category: dialog
+
+    - index: 14
+      dart_name: campaignCodeInputDialog
+      json_value: campaign_code_input_dialog
+      description: キャンペーンコード入力ダイアログ
+      category: dialog
+
+    - index: 15
+      dart_name: appCampaignApplicationDialog1
+      json_value: app_campaign_application_dialog_1
+      description: キャンペーン応募ダイアログ1
+      category: dialog
+
+    - index: 16
+      dart_name: appCampaignApplicationDialog2
+      json_value: app_campaign_application_dialog_2
+      description: キャンペーン応募ダイアログ2
+      category: dialog
+
+    - index: 17
+      dart_name: appConfirmUseCampaignTicket
+      json_value: app_confirm_use_campaign_ticket
+      description: キャンペーンチケット使用確認
+      category: dialog
+
+    - index: 18
+      dart_name: appEntryResultDialog
+      json_value: app_entry_result_dialog
+      description: 抽選結果ダイアログ
+      category: dialog
+
+  # === イベント・ゲーム関連 (5箇所) ===
+  event_game_related:
+    - index: 19
+      dart_name: eventPage
+      json_value: event_page
+      description: イベントページ
+      category: page
+
+    - index: 20
+      dart_name: winHistoryPage
+      json_value: win_history_page
+      description: 当選履歴ページ
+      category: page
+
+    - index: 21
+      dart_name: dreamChancePage
+      json_value: dream_chance_page
+      description: ドリームチャンスページ
+      category: page
+
+    - index: 22
+      dart_name: roulettePage
+      json_value: roulette_page
+      description: ルーレットページ
+      category: page
+
+    - index: 23
+      dart_name: appRouletteReadyDialog
+      json_value: app_roulette_ready_dialog
+      description: ルーレット準備ダイアログ
+      category: dialog
+
+  # === その他 (4箇所) ===
+  others:
+    - index: 24
+      dart_name: loginBonusPage
+      json_value: login_bonus_page
+      description: ログインボーナスページ
+      category: page
+
+    - index: 25
+      dart_name: appLoadingDialog1
+      json_value: app_loading_dialog_1
+      description: アプリ読み込みダイアログ1
+      category: dialog
+
+    - index: 26
+      dart_name: appLoadingDialog2
+      json_value: app_loading_dialog_2
+      description: アプリ読み込みダイアログ2
+      category: dialog
+
+    - index: 27
+      dart_name: applovinRewardAdWatchCompleteDialog
+      json_value: applovin_reward_ad_watch_complete_dialog
+      description: AppLovinリワード広告視聴完了ダイアログ
+      category: dialog
+
+  # === AppLovin Reward Ad (1箇所) ===
+  applovin_ads:
+    - index: 28
+      dart_name: applovinRewardAd
+      json_value: applovin_reward_ad
+      description: AppLovinリワード広告
+      category: ad
+
+# サマリー
+summary:
+  total_types: 29
+  by_category:
+    manga_related: 5
+    point_receive_related: 5
+    campaign_related: 9
+    event_game_related: 5
+    others: 4
+    applovin: 1
+  by_type:
+    page: 9
+    dialog: 16
+    tab: 2
+    component: 1
+    ad: 1
+  note: |
+    OptimizedAdMobBannerは削除され、全てAppAdmobBannerに統合されました。
+    campaign_item_page_admobとcampaign_item_page_optimizedは
+    campaign_item_pageに統合されました。
+
+# 使用方法
+usage:
+  description: |
+    このYAMLファイルは、アプリ内の全ての広告表示エリアを定義しています。
+    各エリアは以下の情報を持ちます:
+    - index: enumのインデックス番号
+    - dart_name: Dartコード内での名前
+    - json_value: API通信時のJSON値
+    - description: エリアの日本語説明
+    - category: エリアの種類（page/dialog/tab/component/ad）
+
+  example_api_call: |
+    POST /ad/impression
+    {
+      "adProvider": "admob",
+      "adType": "rectangle",
+      "adId": "ca-app-pub-xxxxx",
+      "screen": 0,  // manga_detail_page のindex
+      "appVersion": "1.0.0",
+      "platform": "ios",
+      "networkType": "wifi"
+    }
+
+  dart_usage_example: |
+    // Dartでの使用例
+    AppAdmobBanner(
+      adDisplayAreaType: AdDisplayAreaType.mangaDetailPage,
+      width: 320,
+      height: 50,
+    )
