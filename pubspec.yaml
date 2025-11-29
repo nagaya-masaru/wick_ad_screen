@@ -1,0 +1,350 @@
+name: wick_app
+description: A new Flutter project.
+publish_to: 'none'
+# 下記は内部テスター用とWick Devのメジャーバージョン（iOS）
+version: 1.1.37+2
+# Androidのリリースバージョン
+#version: 1.1.36+262
+
+# 下記はWick Test用のメジャーバージョン
+#version: 1.0.7+301
+
+# 下記はWick Dev用のメジャーバージョン
+#version: 1.0.7+489
+
+environment:
+  sdk: ^3.9.2
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  intl: ^0.20.2
+  simple_logger: ^1.10.0
+
+  # Api Network
+  freezed_annotation: ^3.1.0
+  dio: ^5.9.0
+
+  # State Management
+  riverpod: ^3.0.0
+  flutter_riverpod: ^3.0.0
+  hooks_riverpod: ^3.0.0
+  flutter_hooks: ^0.21.3+1
+  flutter_use: ^1.0.0
+  riverpod_annotation: ^3.0.0
+
+  # UI Utils
+  keyboard_dismisser: ^3.0.0
+  gap: ^3.0.1
+  flutter_screenutil: ^5.9.3
+
+  # Image
+  cached_network_image: ^3.4.1
+  flutter_cache_manager: ^3.4.1
+  image_cropper: ^10.0.0+1
+  image_picker: ^1.2.0
+
+  # Firebase
+  firebase_core: ^4.2.0
+
+  # Notifications
+  flutter_local_notifications: ^19.4.2
+  firebase_messaging: ^16.0.2
+  app_links: ^6.4.1
+
+  # Routing
+  auto_route: ^10.1.2
+
+  # Assets Generate
+  flutter_gen: ^5.12.0
+  flutter_svg: ^2.2.1
+  flutter_native_splash: ^2.4.6
+  flutter_launcher_icons: ^0.14.4
+  flutter_gen_core: ^5.10.0
+
+  # Form
+  flutter_form_builder: ^10.2.0
+  form_builder_validators: ^11.2.0
+
+  # External Utils
+  url_launcher: ^6.3.2
+  share_plus: ^12.0.0
+
+  # Widget
+  video_player: ^2.10.0
+  video_trimmer: ^5.0.0
+
+  # QR Code
+  qr_code_scanner: ^1.0.1
+
+  # Calendar
+  table_calendar: ^3.1.2
+
+  # Network
+  connectivity_plus: ^6.1.0
+
+  # Local DB
+  path_provider: ^2.1.5
+  path: ^1.9.1
+  shared_preferences: ^2.5.3
+  sqflite: ^2.4.0
+  hive: ^2.2.3
+  hive_flutter: ^1.1.0
+
+  loader_overlay: ^5.0.0
+  keyboard_actions: ^4.2.0
+  carousel_slider: ^5.0.0
+  lottie: ^3.1.2
+  flutter_secure_storage: ^9.2.2
+  pull_to_refresh_flutter3: ^2.0.2
+  http: ^1.2.2
+  html: ^0.15.4
+  dismissible_page: ^1.0.2
+
+  # スクショ禁止
+  screen_protector: ^1.4.7
+  screenshot_callback: ^3.0.1
+
+  visibility_detector: ^0.4.0+2
+  flutter_shakemywidget: ^1.0.5+1
+  flutter_mentions: ^2.0.1
+  flutter_mosaic: ^0.0.4
+  package_info_plus: ^9.0.0
+
+  # video player with pip support
+  video_player_pip: ^0.0.10
+
+  google_mobile_ads: ^6.0.0
+  gma_mediation_meta: ^1.1.0
+  gma_mediation_line: ^1.0.0
+  applovin_max: ^4.3.0
+
+  firebase_crashlytics: ^5.0.3
+  adjust_sdk: ^5.4.4
+
+  flutter_sliding_up_panel: ^2.1.1
+  bordered_text: ^2.0.0
+  dotted_border: ^3.1.0
+
+  animated_text_kit: ^4.3.0
+  flutter_animate: ^4.5.2
+
+  app_tracking_transparency: ^2.0.6+1
+  vibration: ^3.1.4
+
+  ## アプリ内課金（ios）
+  in_app_purchase: 3.2.3  # Issue #169335対応: 安定版に固定
+  in_app_purchase_android: ^0.4.0+5
+  # in_app_purchase_storekit: ^0.4.2  # コメントアウト（dependency_overridesで管理）
+
+  permission_handler: ^12.0.1
+  volume_controller: ^2.0.7
+
+  custom_refresh_indicator: ^4.0.1
+  firebase_analytics: ^12.0.3
+  flutter_widget_from_html: ^0.17.1
+  smooth_page_indicator: ^1.2.1
+
+  widgets_to_image: ^2.0.1
+  scrolls_to_top: ^2.1.1
+  device_info_plus: ^12.1.0
+  shorebird_code_push: ^2.0.5
+  screenshot: ^3.0.0
+  gal: ^2.3.2
+  in_app_review: ^2.0.11
+  equatable: ^2.0.7
+  tuple: ^2.0.2
+  app_badge_plus: ^1.2.3
+  safe_device: ^1.3.8
+  external_display: ^0.4.2+1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  # Static analysis
+  pedantic_mono: ^1.34.0
+  # custom_lint: ^0.8.1  # Temporarily disabled due to analyzer version conflict
+
+  # freezed
+  freezed: ^3.2.3
+  build_runner: ^2.4.13
+  lean_builder: ^0.1.2  # Temporarily disabled due to analyzer version conflict
+  json_serializable: ^6.11.1
+
+  # router
+  auto_route_generator: ^10.2.4
+  flutter_gen_runner: ^5.12.0
+  riverpod_generator: ^3.0.0
+
+  # local DB
+  # hive_generator: ^2.0.1  # analyzer互換性の問題で一時的に無効化。代わりに手動で.g.dartファイルを作成
+
+# Issue #169335対応: 問題のあるstorekit部分だけをダウングレード
+# hive_generatorの古い依存を上書き
+dependency_overrides:
+  in_app_purchase_storekit: 0.3.22+1
+  source_gen: ^3.0.0
+  build: ^3.0.0
+  # Fix just_audio build error with state getter
+  just_audio: 0.10.5
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/svgs/
+    - assets/svgs/logo/
+    - assets/svgs/buttons/
+    - assets/svgs/active/
+    - assets/svgs/arrow/
+    - assets/svgs/bnb/base/
+    - assets/svgs/bnb/manga/
+    - assets/svgs/bnb/sns/
+    - assets/svgs/corezo/
+    - assets/svgs/sns_reaction/
+    - assets/svgs/deactive/
+    - assets/svgs/drawer/
+    - assets/svgs/grey/
+    - assets/svgs/super_contents/
+    - assets/svgs/point_receive/
+    - assets/svgs/manga/
+    - assets/svgs/manga/ranking/
+    - assets/svgs/manga/ranking/slider/
+    - assets/svgs/manga/sommelier/
+    - assets/svgs/awards/
+    - assets/svgs/awards/trophy/
+    - assets/svgs/install_purpose/
+    - assets/svgs/sns/
+    - assets/svgs/icons/
+    - assets/lotties/
+    - assets/images/
+    - assets/images/ad/
+    - assets/images/corezo/
+    - assets/images/petokoto/
+    - assets/images/pip/
+    - assets/images/button/
+    - assets/images/button/noise/
+    - assets/images/minimado/
+    - assets/images/manga/
+    - assets/images/days_neo_award/
+    - assets/images/manga/home/
+    - assets/images/manga_genre/
+    - assets/images/manga/season_bar/
+    - assets/images/manga/weekly_bar/
+    - assets/images/manga/ranking/
+    - assets/images/strategy/
+    - assets/images/fread/
+    - assets/images/awards/
+    - assets/images/awards/header/
+    - assets/images/awards/trophy_with_frame/
+    - assets/images/search_title/
+    - assets/images/pip_application/
+    - assets/images/super_like/
+    - assets/images/stroke_text/
+    - assets/images/switcher/
+    - assets/images/follow/
+    - assets/images/sns/
+    - assets/images/super_reply/
+    - assets/images/sns_notifications/
+    - assets/images/free_campaign/
+    - assets/images/free_readable/
+    - assets/images/discount_campaign/
+    - assets/images/donation/
+    - assets/images/user_page_award/
+    - assets/images/sns_top_tab/
+    - assets/images/campaign/
+    - assets/images/event/
+    - assets/images/login_bonus/
+    - assets/images/dream_chance/
+    - assets/images/sns_reaction/
+    - assets/images/memory_and_fav_list/
+    - assets/images/payment/ios/
+    - assets/images/payment/google/
+    - assets/images/icons/
+    - assets/images/logo/
+    - assets/images/splash/
+    - assets/epubs/sample/
+    - assets/images/minimado_introduce/
+    - assets/images/campaign_prize_images/
+    - shorebird.yaml
+  fonts:
+    - family: Inter
+      fonts:
+        - asset: assets/fonts/Inter-Black.ttf
+          weight: 900
+        - asset: assets/fonts/Inter-ExtraBold.ttf
+          weight: 800
+        - asset: assets/fonts/Inter-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/Inter-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/Inter-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/Inter-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/Inter-Light.ttf
+          weight: 300
+        - asset: assets/fonts/Inter-ExtraLight.ttf
+          weight: 200
+        - asset: assets/fonts/Inter-Thin.ttf
+          weight: 100
+    - family: Splash
+      fonts:
+        - asset: assets/fonts/splash/MPLUSRounded1c-Black.ttf
+          weight: 900
+        - asset: assets/fonts/splash/MPLUSRounded1c-ExtraBold.ttf
+          weight: 800
+        - asset: assets/fonts/splash/MPLUSRounded1c-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/splash/MPLUSRounded1c-Bold.ttf
+          weight: 600
+        - asset: assets/fonts/splash/MPLUSRounded1c-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/splash/MPLUSRounded1c-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/splash/MPLUSRounded1c-Light.ttf
+          weight: 300
+        - asset: assets/fonts/splash/MPLUSRounded1c-Light.ttf
+          weight: 200
+        - asset: assets/fonts/splash/MPLUSRounded1c-Thin.ttf
+          weight: 100
+    - family: RammettoOne
+      fonts:
+        - asset: assets/fonts/RammettoOne/RammettoOne.ttf
+          weight: 900
+        - asset: assets/fonts/RammettoOne/RammettoOne.ttf
+          weight: 800
+        - asset: assets/fonts/RammettoOne/RammettoOne.ttf
+          weight: 700
+        - asset: assets/fonts/RammettoOne/RammettoOne.ttf
+          weight: 600
+        - asset: assets/fonts/RammettoOne/RammettoOne.ttf
+          weight: 500
+        - asset: assets/fonts/RammettoOne/RammettoOne.ttf
+          weight: 400
+        - asset: assets/fonts/RammettoOne/RammettoOne.ttf
+          weight: 300
+        - asset: assets/fonts/RammettoOne/RammettoOne.ttf
+          weight: 200
+        - asset: assets/fonts/RammettoOne/RammettoOne.ttf
+          weight: 100
+
+flutter_gen:
+  output: lib/gen/
+  line_length: 80
+  fonts:
+    outputs:
+      package_parameter_enabled: true
+  integrations:
+    flutter_svg: true
+
+flutter_icons:
+  # 設定後、以下コマンド実行してアイコンを生成
+  # flutter pub run flutter_launcher_icons:main
+  android: true
+  ios: true
+  image_path: "assets/images/icon.png" #画像を入れたパスを追加
+  adaptive_icon_background: "#FFFFFF" #背景色を指定
+  adaptive_icon_foreground: "assets/images/icon_adaptive.png" #Android用画像の追加,adaptive_icon_foregroundに背景透過し50%縮小した画像を追加
