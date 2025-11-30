@@ -186,12 +186,7 @@ ad_display_area_types:
       json_value: applovin_reward_ad
       description: AppLovinリワード広告
       category: ad
-  test:
-    - index: 29
-      dart_name: test
-      json_value: test
-      description: test
-      category: test
+
 
 # サマリー
 summary:
