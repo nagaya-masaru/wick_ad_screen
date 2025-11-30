@@ -133,13 +133,6 @@ enum AdDisplayAreaType {
   /// AppLovinリワード広告
   @JsonValue('applovin_reward_ad')
   applovinRewardAd,
-
-
-// === test ===
-
-  /// test
-  @JsonValue('test')
-  test,
 }
 
 extension AdDisplayAreaTypeExtension on AdDisplayAreaType {
@@ -203,8 +196,6 @@ extension AdDisplayAreaTypeExtension on AdDisplayAreaType {
         return 'applovin_reward_ad_watch_complete_dialog';
       case AdDisplayAreaType.applovinRewardAd:
         return 'applovin_reward_ad';
-      case AdDisplayAreaType.test:
-        return 'test';
     }
   }
 

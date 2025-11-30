@@ -45,7 +45,7 @@ jobs:
             exit 0
           fi
 
-          git add Flutter/enums/ad_display_area_type/ad_display_area_type.dart
+          git add lib/enums/ad_display_area_type.dart
           git add data/ad_display_area_type.json
           git commit -m "chore: Auto-generate AdDisplayAreaType files from YAML [skip ci]"
           git push

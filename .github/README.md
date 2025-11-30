@@ -8,7 +8,7 @@
 
 mainブランチに`ad_display_area_types.yaml`への変更がマージされると、GitHub Actionsが自動的に以下のファイルを更新します:
 
-- `Flutter/enums/ad_display_area_type/ad_display_area_type.dart`
+- `lib/enums/ad_display_area_type.dart`
 - `data/ad_display_area_type.json`
 
 ### 実装方式

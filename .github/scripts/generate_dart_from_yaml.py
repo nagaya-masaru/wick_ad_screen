@@ -123,7 +123,7 @@ def main():
     dart_code = generate_dart_file(types)
 
     # ファイルに書き込み
-    output_path = Path('Flutter/enums/ad_display_area_type/ad_display_area_type.dart')
+    output_path = Path('lib/enums/ad_display_area_type.dart')
     output_path.parent.mkdir(parents=True, exist_ok=True)
 
     with open(output_path, 'w', encoding='utf-8') as f:
