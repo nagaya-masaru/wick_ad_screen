@@ -1,7 +1,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 enum AdDisplayAreaType {
-  // === 漫画関連 ===
+// === 漫画関連 ===
 
   /// 漫画詳細ページ
   @JsonValue('manga_detail_page')
@@ -23,7 +23,8 @@ enum AdDisplayAreaType {
   @JsonValue('doujin_comic_loading_dialog')
   doujinComicLoadingDialog,
 
-  // === ポイント受け取り関連 ===
+
+// === ポイント受け取り関連 ===
 
   /// ポイント一括受け取り確認ダイアログ
   @JsonValue('once_get_point_confirm_dialog')
@@ -45,7 +46,8 @@ enum AdDisplayAreaType {
   @JsonValue('confirm_receive_now_dialog')
   confirmReceiveNowDialog,
 
-  // === キャンペーン関連 ===
+
+// === キャンペーン関連 ===
 
   /// キャンペーンページ
   @JsonValue('campaign_page')
@@ -83,7 +85,8 @@ enum AdDisplayAreaType {
   @JsonValue('app_entry_result_dialog')
   appEntryResultDialog,
 
-  // === イベント・ゲーム関連 ===
+
+// === イベント・ゲーム関連 ===
 
   /// イベントページ
   @JsonValue('event_page')
@@ -105,7 +108,8 @@ enum AdDisplayAreaType {
   @JsonValue('app_roulette_ready_dialog')
   appRouletteReadyDialog,
 
-  // === その他 ===
+
+// === その他 ===
 
   /// ログインボーナスページ
   @JsonValue('login_bonus_page')
@@ -123,11 +127,19 @@ enum AdDisplayAreaType {
   @JsonValue('applovin_reward_ad_watch_complete_dialog')
   applovinRewardAdWatchCompleteDialog,
 
-  // === AppLovin Reward Ad ===
+
+// === AppLovin Reward Ad ===
 
   /// AppLovinリワード広告
   @JsonValue('applovin_reward_ad')
   applovinRewardAd,
+
+
+// === test ===
+
+  /// test
+  @JsonValue('test')
+  test,
 }
 
 extension AdDisplayAreaTypeExtension on AdDisplayAreaType {
@@ -191,6 +203,8 @@ extension AdDisplayAreaTypeExtension on AdDisplayAreaType {
         return 'applovin_reward_ad_watch_complete_dialog';
       case AdDisplayAreaType.applovinRewardAd:
         return 'applovin_reward_ad';
+      case AdDisplayAreaType.test:
+        return 'test';
     }
   }
 
