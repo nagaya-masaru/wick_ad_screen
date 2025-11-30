@@ -9,7 +9,6 @@ on:
 
 permissions:
   contents: write
-  pull-requests: write
 
 jobs:
   generate:
@@ -36,36 +35,17 @@ jobs:
       - name: Generate JSON file
         run: python .github/scripts/generate_json_from_yaml.py
 
-      - name: Check for changes
-        id: check_changes
+      - name: Commit and push changes
         run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
           if git diff --quiet; then
-            echo "changes=false" >> $GITHUB_OUTPUT
-          else
-            echo "changes=true" >> $GITHUB_OUTPUT
+            echo "No changes to commit"
+            exit 0
           fi
 
-      - name: Create Pull Request
-        if: steps.check_changes.outputs.changes == 'true'
-        uses: peter-evans/create-pull-request@v6
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          commit-message: 'chore: Auto-generate AdDisplayAreaType files from YAML'
-          branch: auto-generate-ad-display-area-type
-          delete-branch: true
-          title: 'chore: Auto-generate AdDisplayAreaType files from YAML'
-          body: |
-            ## 自動生成されたファイル
-
-            `ad_display_area_types.yaml` の変更に基づいて、以下のファイルが自動生成されました:
-
-            - `Flutter/enums/ad_display_area_type/ad_display_area_type.dart`
-            - `data/ad_display_area_type.json`
-
-            このPRをマージすることで、変更が反映されます。
-
-            ---
-            🤖 このPRは自動生成されました
-          labels: |
-            automated
-            codegen
+          git add Flutter/enums/ad_display_area_type/ad_display_area_type.dart
+          git add data/ad_display_area_type.json
+          git commit -m "chore: Auto-generate AdDisplayAreaType files from YAML [skip ci]"
+          git push
